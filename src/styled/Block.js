@@ -6,6 +6,8 @@ const Block = styled.div `
     ${props => props.borderRadius ? `border-radius:${props.borderRadius}` : null};
     ${props => props.direction === "y" ? `flex-direction: column` : null};
 
+    ${props => props.x ? `align-items: ${props.x}` : null};
+    ${props => props.y ? `justify-content: ${props.y}` : null};
 
     ${props => props.m ? `margin:${props.m}` : null};
     ${props => props.mt ? `margin-top:${props.mt}` : null};
@@ -13,11 +15,11 @@ const Block = styled.div `
     ${props => props.mr ? `margin-right:${props.mr}` : null};
     ${props => props.mb ? `margin-bottom:${props.mb}` : null};
 
-    ${props => props.p ? `margin:${props.p}` : null};
-    ${props => props.pt ? `margin-top:${props.pt}` : null};
-    ${props => props.pl ? `margin-left:${props.pl}` : null};
-    ${props => props.pr ? `margin-right:${props.pr}` : null};
-    ${props => props.pb ? `margin-bottom:${props.pb}` : null};
+    ${props => props.p ? `padding:${props.p}` : null};
+    ${props => props.pt ? `padding-top:${props.pt}` : null};
+    ${props => props.pl ? `padding-left:${props.pl}` : null};
+    ${props => props.pr ? `padding-right:${props.pr}` : null};
+    ${props => props.pb ? `padding-bottom:${props.pb}` : null};
 
     ${props => props.none ? `display:none` : null}
 
