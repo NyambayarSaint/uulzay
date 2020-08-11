@@ -16,7 +16,7 @@ const Main = (props) => {
                 <Route path="/test2" component={Test2} />
             </Switch>
             <Block white p="15px">
-                <img  src={require('../assets/images/heart.svg')}/>
+                <img alt="Uulzay app" src={require('../assets/images/heart.svg')}/>
             </Block>
             </Container>
         </motion.div>

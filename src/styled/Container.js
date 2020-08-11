@@ -11,7 +11,8 @@ const Container = styled.div `
     display:flex;
     box-sizing:border-box;
     flex-direction:column;
-    ${props => props.rainbow ? `background-image:linear-gradient(to top, ${props.theme.colors.purple}, ${props.theme.colors.blue})` : null};
+    ${props => props.shaped ? `background-image:url(${require('../assets/images/shape.png')});background-size: 100% 100%;` : null}
+    ${props => props.rainbow ? `background-image: linear-gradient(to bottom,${props.theme.colors.blue},#ff7b79)` : null};
     ${props => props.x ? `align-items: ${props.x}` : null};
     ${props => props.y ? `justify-content: ${props.y}` : null};
 `

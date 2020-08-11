@@ -10,6 +10,7 @@ import Welcome from './screens/Welcome'
 import Auth from './screens/Main'
 import Error404 from './screens/Error404'
 import Signup from "./screens/Signup";
+import Signin from "./screens/Signin";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <ProtectedRoute path="/" exact component={Auth} />
                         <Route path="/welcome" component={Welcome} />
                         <Route path="/signup" component={Signup} />
+                        <Route path="/signin" component={Signin} />
                         <Route component={Error404} />
                     </Switch>
                 </div>
