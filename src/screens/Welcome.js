@@ -14,14 +14,22 @@ const Welcome = () => {
         console.log(e,'responseFacebook')
     }
 
-    const clickHandler = () => document.querySelector('.kep-login-facebook').click();
+    // const clickHandler = () => document.querySelector('.kep-login-facebook').click();
 
     return (
         <Container x="center" y="center" rainbow>
             <motion.div initial="hidden" animate="visible" variants={containerVariants} exit={{opacity: 0, x: '100vw'}}>
                 <Block direction="y" p="15px">
-                    <motion.img initial={{y:-25,opacity:0}} animate={{y:0,opacity:1, transition:{delay:0.5}}} alt="Uulzay app" style={{width:'50%',marginLeft:'25%', padding:20,boxSizing:'border-box',borderRadius:'100%',background:'white'}} src={require('../assets/images/heart.svg')} />
-                    <motion.p initial={{y:25,opacity:0}} animate={{y:0,opacity:1, transition:{delay:0.7}}}><Text light white align="center" mt="15px">Уулзаад шаалцья?</Text></motion.p>
+                    <motion.img
+                        variants={imgVariants}
+                        alt="Uulzay app"
+                        style={{boxShadow:'2px 2px 35px white',width:'50vw',height:'50vw',padding:20,boxSizing:'border-box',borderRadius:'100%',background:'white'}}
+                        src={require('../assets/images/heart.svg')}
+                    />
+                    <motion.span variants={pVariants}><Text light white align="center"
+                        style={{fontFamily:"'Pacifico', cursive"}}
+                        mt="15px">Uulzay...</Text>
+                     </motion.span>
                 </Block>
             </motion.div>
             
@@ -34,7 +42,7 @@ const Welcome = () => {
                         <AiOutlineKey fontSize={20}/> &nbsp; <Link to="/signup"><Text black>Бүртгүүлэх</Text></Link>
                     </Button>
                     <Text white light center small mb="5px">or</Text>
-                    <Button variant="contained" color="primary" onClick={clickHandler}>
+                    <Button variant="contained" color="primary">
                         <AiFillFacebook fontSize={20}/> &nbsp; Фэйсбүүк эрхээрээ нэвтрэх
                     </Button>
                 </Block>
@@ -60,4 +68,14 @@ const containerVariants = {
             duration:0.4,
         }
     }
+}
+
+const imgVariants = {
+    hidden:{y:-25,opacity:0},
+    visible:{y:0,opacity:1, transition:{delay:0.5}}
+}
+
+const pVariants = {
+    hidden:{y:25,opacity:0},
+    visible:{y:0,opacity:1, transition:{delay:0.7}}
 }

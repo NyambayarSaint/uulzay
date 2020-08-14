@@ -9,6 +9,7 @@ import {FaKey} from 'react-icons/fa'
 import { TextField, InputAdornment, Button } from '@material-ui/core';
 
 const Signin = () => {
+
     return (
         <Container rainbow x="center" y="space-between">
             <Block style={{alignSelf:'flex-start'}} pl="15px" pr="15px">
@@ -18,7 +19,7 @@ const Signin = () => {
                 <motion.div initial="hidden" animate="visible" variants={containerVariants}>
                     <Block white p="30px" direction="y">
                         <motion.img  initial={{y:-25,opacity:0}} animate={{y:0,opacity:1, transition: {delay:0.3}}} alt="Uulzay app" style={{height:50, marginBottom:30}} src={require('../assets/images/heart.svg')} />
-                        <motion.p initial={{y:25,opacity:0}} animate={{y:0,opacity:1,transition: {delay: 0.5}}}><Text center mb="30px" light>Нэвтрэх</Text></motion.p>
+                        <motion.span initial={{y:25,opacity:0}} animate={{y:0,opacity:1,transition: {delay: 0.5}}}><Text center mb="30px" light>Нэвтрэх</Text></motion.span>
                         <TextField style={{marginBottom:15}} InputProps={{startAdornment: (<InputAdornment><MdEmail style={{opacity:0.7}}/>&nbsp;</InputAdornment>)}} label="И-мэйл хаяг" fullWidth type="email"/>
                         <TextField style={{marginBottom:15}} InputProps={{startAdornment: (<InputAdornment><FaKey style={{opacity:0.7}}/>&nbsp;</InputAdornment>)}} label="Нууц үг" fullWidth type="password"/>
                         <Button variant="contained" style={{marginTop:30}}>Sign in</Button>
